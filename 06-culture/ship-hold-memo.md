@@ -1,23 +1,21 @@
 # Ship-or-Hold Memo · Ascend IQ
 
-Paste the markdown from the Module 6 Lab Guide over this file, or upload the downloaded `ship-hold-memo.md` in its place, then commit.
-
-> **Decision:** _SHIP or HOLD_
+> **Decision:** SHIP
 
 ## The Answer
 
-_Your call and the reason for it, in one sentence._
+Approve the launch of Ascend IQ to early adopters(5%) of user base on 11/11/26 . The agent passes  95%  eval cases against a  92% threshold, and the two known failure modes are fixed. A tightly scoped launch gets us real usage data, and the risk stays contained.
 
 ## The Arguments
 
-### 1. _Main point_
+### 1. Agent is giving out stale pricing
 
-_Evidence: the number from your repo that proves it._
+Evidence: Even though agent is providing wrong pricing but that got caught and engineering has fixed it and fix is verified
 
-### 2. _Main point_
+### 2. Wrong Export Option
 
-_Evidence: the number from your repo that proves it._
+Evidence: Agent was hallucinating and making an assumption that UI supports native export but that has been fixed and fix is verified.
 
 ## Next Step · Decision Needed
 
-_What you need the CPO to approve, and by when._
+Approve the launch to EAP on 11/11/26 . We will review results on 12/11/26 and either expand to next 20% if  success criteria is met, or roll back if it does not

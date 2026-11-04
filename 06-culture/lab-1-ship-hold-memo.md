@@ -1,47 +1,21 @@
-# Ship/Hold Memo · Ascend IQ
+# Ship-or-Hold Memo · Ascend IQ
 
-> Repo file `ai-evals/06-culture/lab-1-ship-hold-memo.md`. A Pyramid-Principle executive memo: the recommendation comes **first**.
->
-> Fill this with the **Ship/Hold Memo Builder**, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
-
-> **Decision:** 🚀 SHIP _(or 🛑 HOLD)_
-
-**To:** _[CPO] · cc Eng Lead · Trust & Safety_
-**From:** _[Your Name] · AI Evals Cohort · [Date]_
+> **Decision:** SHIP
 
 ## The Answer
 
-_First sentence = the recommendation and the business reason. Do not bury it._
+Approve the launch of Ascend IQ to early adopters(5%) of user base on 11/11/26 . The agent passes  95%  eval cases against a  92% threshold, and the two known failure modes are fixed. A tightly scoped launch gets us real usage data, and the risk stays contained.
 
 ## The Arguments
 
-### 1. _Argument pillar title_
+### 1. Agent is giving out stale pricing
 
-_…_
+Evidence: Even though agent is providing wrong pricing but that got caught and engineering has fixed it and fix is verified
 
-### 2. _Argument pillar title_
+### 2. Wrong Export Option
 
-_…_
-
-### 3. _Argument pillar title_
-
-_…_
-
-## Evidence · Trust Metrics
-
-```
-- Metric: result (Gate: bar) PASS/FAIL · Source
-- … cite exact numbers from M2–M5 (hallucination rate vs gate, factual grounding %, bias coverage %, p95 latency)
-```
-
-## Business Risk
-
-_Quantified SHIP-path vs HOLD-path risk (revenue, churn, competitive window)._
+Evidence: Agent was hallucinating and making an assumption that UI supports native export but that has been fixed and fix is verified.
 
 ## Next Step · Decision Needed
 
-_A specific decision request with a deadline — e.g. "Approve the Hold rollback by Friday to keep the Q3 launch window."_
-
-## Reflection
-
-_What defining "good enough" forced you to confront._
+Approve the launch to EAP on 11/11/26 . We will review results on 12/11/26 and either expand to next 20% if  success criteria is met, or roll back if it does not

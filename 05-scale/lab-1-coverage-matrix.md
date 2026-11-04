@@ -1,35 +1,27 @@
-# Lab 1, Ascend Analytics Coverage Matrix
+# Module 5 · Coverage Matrix · Competitor Signal Tracker
 
-> Repo file `ai-evals/05-scale/lab-1-coverage-matrix.md`. Feeds the **Coverage / scale** slide of the final pitch deck (Module 6).
->
-> Fill this with the **Coverage Matrix Tool**, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly. **Force ≥2 ❌ gaps** — an all-green matrix isn't real.
+## Coverage Row
 
-**Product:** _…_
-
-## Coverage row
-
-| Product | Hallucination | Bias | Latency | Toxicity | Drift Monitoring |
+| Product | Hallucination Rate | Fairness | Latency | UX Trust | Robustness |
 |---|---|---|---|---|---|
-| _…_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ |
+| Competitor Signal Tracker | ❌ Gap | ❌ Gap | ✅ Covered | ✅ Covered | ⚠️ Partial |
 
-## Method + Ground Truth (two ✅/⚠️ cells)
+## What Runs Today
 
-### _Risk name 1_
-- **Method:** _how you evaluate it_
-- **Ground truth:** _what you grade against_
+- A timer alerts if the nightly scoring run takes more than 2 hours.
+- A style check flags summaries written in a casual or alarmist tone before they reach the sales team.
 
-### _Risk name 2_
-- **Method:** _how you evaluate it_
-- **Ground truth:** _what you grade against_
+## Accepted Gap
 
-## Strategic acceptance
+**Fairness.** We accept this gap as news and social posts can be skewed towards a customer in certain geo or customer group so there is a high chance that it could be part of normal product behavior. 
 
-**Accepted gap:** _which ❌ you're accepting_
+We’ll look again: If I have repeated and high error rate in future I would like to revisit. In the meantime, I will keep doing spot checks with 20 items a month, sampled by region and language, with a set of 5% error threshold.
 
-> _Why it's an acceptable risk right now + the kill criterion / date that would change the call._
+## Critical Gap
 
-## Critical mitigation
+We’ve flagged Hallucination Rate as the most critical gap for Competitor Signal Tracker because Hallucination Rate is our most critical gap, because a wrong claim about a competitor can mislead sales and skew product strategy. To close it, an LLM judge or entailment model will trace every claim in each summary back to its source article. We’ll calibrate the judge on a golden set of 200 labeled articles, then run it automatically on 10% of each night’s output, with a weekly human review. An alert fires if more than 2% of claims are unsupported. PM owns this, with a target date of  12/05. Once we have 30 days of nightly runs and 90%+ agreement between the judge and human labels, we’ll mark it Covered.
 
-- **Critical gap:** _the ❌ you cannot accept_
-- **Why critical:** _…_
-- **Mitigation plan:** _concrete plan with a date/owner — not "we'll add it later"._
+## After the Pressure Test
+
+Asked for measurable data for error rate and make it a plan with owner and dates
+
